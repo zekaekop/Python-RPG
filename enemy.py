@@ -73,6 +73,9 @@ class Player:
         print("<======================>")
         print("\n")
 
+    def __str__(self):
+        return self.player_name
+
 def user_attack(user_player):
     while True:
         user_choice = input("Commands(Help): ")
@@ -186,8 +189,10 @@ def Main():
 
 
     user_player = pickable_players[user_picked_player]
-    print("\n") 
-    
+    print("\n")
+    print(f"Congratulations! You are now a {user_player}.")
+    print("\n")
+
     while True:
         level += 1
 
